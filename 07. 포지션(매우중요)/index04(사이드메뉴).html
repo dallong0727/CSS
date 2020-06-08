@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0; margin: 0;
+        }
+        ul, li {list-style: none;}
+        header {position: fixed; top: 0; left: 0; width: 100%; z-index: 10;}
+        .logo {text-align: center; background-color: white;}
+        .menu-list {background-color: black; text-align: center;}
+        .menu-list li {display: inline-block; padding: 20px;}
+        .menu-list li a { text-decoration: none; color: white;}
+        .menu-list li:hover {background-color: #777;}
+
+        /* 본문 */
+        section {background-color: aquamarine; height: 1000px; margin-top: 113px;}
+        .side {position: fixed; top: 70px; right: 0; z-index: 5;} /* position의 우선순위 z-index */
+        .side-list li {background-color: black; padding: 20px; border: 1px solid white; text-align: center;}
+        .side-list li a {text-decoration: none; color: white; font-size: medium; letter-spacing: -2px;}
+        .side-list li:hover {background-color: #777;}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class = "logo">
+            <img src="img/bgimg.png" width="50px">
+        </div>
+        <nav class = "menu">
+            <ul class = "menu-list">
+                <li><a href ="">메뉴1</a></li>
+                <li><a href ="">메뉴1</a></li>
+                <li><a href ="">메뉴1</a></li>
+                <li><a href ="">메뉴1</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <!-- 사이드 메뉴 -->
+    <aside class="side">
+        <ul class="side-list">
+            <li>
+                <a href="">
+                    <p>까톡</p>
+                    <p>kkk123</p>
+                </a>
+            </li>
+            <li><a href="">전화번호</a></li>
+            <li><a href="">메뉴1</a></li>
+            <li><a href="">메뉴1</a></li>
+        </ul>
+    </aside>
+    <section>
+        <div>
+            본문
+        </div>
+    </section>
+
+</body>
+</html>
