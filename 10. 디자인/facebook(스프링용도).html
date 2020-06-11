@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+    <!-- 제이쿼리 추가 (순서 중요)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- 가장 아래쪽에 개인 디자인을 추가 -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body, html {width : 100%; font-family: 'Lexend Tera', sans-serif;}
+        ul, li {list-style: none;}
+        input, textarea, select, button {-moz-appearance: none; -webkit-appearance: none;}
+
+        .aside-inner {margin-top: 20px;}
+        .aside-inner ul li a {text-decoration: none; color: #333333;}
+          
+        .text-content textarea {height: 50px; transition: height 0.5s ease-in-out; border-radius: 0px;}
+        .text-content textarea:focus {height: 150px;}
+        
+        .section-inner {border-left: 1px solid #ddd; border-right: 1px solid #ddd; padding : 10px 15px;}
+        .text-group {overflow: hidden;}
+        .text-group .left {float: left;}
+        .text-group .right {float:right}   
+        
+        .section-inner .title-inner {padding :15px 0px; position: relative;} /* 부모릴레이티브 */
+        .section-inner .title p {margin: 0px;}
+        .title-inner .profile {position: absolute; top: 15px; left: 0px;} /* 자식릴레이티브 */
+        .title-inner .title {padding-left: 50px;} 
+
+        .section-inner .like-inner {margin-top: 10px; padding: 10px 0px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+
+        .section-inner .link-inner {padding: 10px 0px; overflow: hidden; border-bottom: 1px solid #ddd;}
+        .section-inner .link-inner span {display: block; float: left; width: 33.3333%; text-align: center; box-sizing: border-box; text-decoration: none; color:#333333;}
+        
+        @media (max-width: 767px) {
+            .aside-inner{display: none;}
+        }
+
+    </style>
+</head>
+<body>
+
+      
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!-- 로고를 넣는 영역 -->
+                <a class="navbar-brand" href="#"><img src="img/logo.svg"></a>
+                </div>
+
+                <!-- 네비바 안에 포함되는 컨텐츠 -->
+                <div class="collapse navbar-collapse" id="myNavbar">
+                
+                <!-- 좌측 메뉴 -->
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Page 1</a></li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                </ul>
+
+                <!-- 우측 드롭다운 -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">정보관리</a>
+                   
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>로그인</a></li>
+                            <li><a href="#">Disabled</a></li>
+                            <li><a href="#">Active</a></li>
+                            <li><a href="#">Normal</a></li>
+                        </ul>
+                    </li>
+                  <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+                  
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3" >
+                    <div class="aside-inner">
+                        <div class="menu1">
+                            <p><img src="img/profile.png" alt="profile">이준구</p>
+                            <ul>
+                                <li><a href="#"></a>뉴스피드</li>
+                                <li><a href="#"></a>메신저</li>
+                                <li><a href="#"></a>watch동영상</li>
+                            </ul>
+                        </div>
+                        <div class="menu2">
+                            <p>둘러보기</p>
+                            <ul>
+                                <li><a href="#"></a>기부 캠페인</li>
+                                <li><a href="#"></a>페이지</li>
+                                <li><a href="#"></a>그룹</li>
+                                <li><a href="#"></a>이벤트</li>
+                                <li><a href="#"></a>친구리스트</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-7 col-xs-12 section-inner">
+                    <h4>게시글을 등록하세요</h4>
+                    <div class="text-content">
+                        <textarea class="form-control" rows="3"></textarea>
+                        <div class="text-group">
+                            <button type="button" class="btn btn-primary left">이미지 업로드</button>
+                            <button type="button" class="btn btn-info right">등록하기</button> 
+                        </div>
+                    </div>
+                    <div>
+                        <!-- 타이틀 영역 -->
+                        <div class="title-inner">
+                            <div class="profile">
+                                <img src="img/profile.png" alt="profile">
+                            </div>
+                            <div class="title">
+                                <p>테스트</p>
+                                <small>21시간</small>
+                            </div>
+                        </div>
+                        <!-- 내용영역 -->
+                        <div class="content-inner">
+                            <p>삶이 우리를 끝없이 시험하기에 고어텍스는 한계를 테스트 합니다.</p>
+                        </div>
+                        <!-- 이미지영역 -->
+                        <div class="image-inner">
+                            <img src="img/facebook.jpg" alt="facebook">
+                        </div>
+                        <!-- 좋아요영역 -->
+                        <div class="like-inner">
+                            <img src="img/icon.jpg" alt="icon" width="20px" >
+                            <span>522</span>
+                        </div>
+                        <!-- 버튼영역 -->
+                        <div class="link-inner">
+                            <span class="glyphicon glyphicon-thumbs-up">좋아요</span>
+                            <span class="glyphicon glyphicon-comment">댓글달기</span>
+                            <span class="glyphicon glyphicon-share-alt">공유하기</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="aside-inner">
+                        <div class="menu1">
+                            <p>목록</p>
+                            <ul>
+                                <li><a href="#"></a>목록1</li>
+                                <li><a href="#"></a>목록2</li>
+                                <li><a href="#"></a>목록3</li>
+                                <li><a href="#"></a>목록4</li>
+                                <li><a href="#"></a>목록5</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="footer-menu">
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">개인정보</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12  /* col속성이 float을 가지고 있기 때문에 부모요소에 overflow:hidden */col-lg-8 copyright">
+                    <a href="">
+                        <img src="img/logo.svg" width="30">
+                    </a>
+                    세상의 모든 사랑으로 @mdo @fat와 에 의해 디자인되고 만들어졌습니다.<br>
+                    코드 기여자 의 도움과 코어 팀 에 의해 유지보수 됩니다.<br>
+                    코드는 MIT, 문서는 CC BY 3.0 에 의거하여 허가합니다.<br>
+                    이 문서는 이지훈 에 의해 번역 되었습니다.<br>
+                    <address>@Bootstrap. ALL RIGHTS RESERVED</address>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
