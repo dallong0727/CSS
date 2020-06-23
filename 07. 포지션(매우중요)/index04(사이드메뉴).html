@@ -6,9 +6,17 @@
     <title>Document</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Merriweather');
         * {
             padding: 0; margin: 0;
         }
+        body, html {width : 100%; font-family: 'Merriweather',serif}
+        img {max-width: 100%; height: auto;}
+        ul, li {list-style: none;}
+      
+        input, textarea, select, button {-moz-appearance: none; -webkit-appearance: none;}
+        .btn {border-radius: 0px;}
+
         ul, li {list-style: none;}
         header {position: fixed; top: 0; left: 0; width: 100%; z-index: 10;}
         .logo {text-align: center; background-color: white;}
@@ -17,9 +25,8 @@
         .menu-list li a { text-decoration: none; color: white;}
         .menu-list li:hover {background-color: #777;}
 
-        /* 본문 */
         section {background-color: aquamarine; height: 1000px; margin-top: 113px;}
-        .side {position: fixed; top: 70px; right: 0; z-index: 5;} /* position의 우선순위 z-index */
+        .side {position: fixed; top: 170px; right: 0; z-index: 5;} /* position의 우선순위 z-index */
         .side-list li {background-color: black; padding: 20px; border: 1px solid white; text-align: center;}
         .side-list li a {text-decoration: none; color: white; font-size: medium; letter-spacing: -2px;}
         .side-list li:hover {background-color: #777;}
